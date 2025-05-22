@@ -1,0 +1,12 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: codgen-release010-test-dsp-job-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: codgen-release010-test-dsp-job
+    namespace: rhdh-app
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: codgen-release010-test-dsp-job-role
